@@ -20,84 +20,88 @@ export default async function Home() {
       <h2 className="mt-4 font-bold text-gray-700 text-3xl">
         Related Articles
       </h2>
-      {projects.map((project) => (
-        <div
-          key={project._id}
-          className="mt-5 flex flex-col justify-center items-center w-[620px]"
-        >
-          <div className="max-w-full flex space-x-5 ">
+      <div className="flex flex-wrap justify-center">
+        <div className="mt-5 flex flex-col justify-center items-center w-[620px]">
+          <div className="max-w-full flex flex-row space-x-5 ">
+            <Link href={`/projects/${projects[0].slug}`}>
+              <div
+                className="h-[342px] w-[400px] border border-black rounded-2xl"
+                style={{
+                  backgroundImage: `url(${projects[0].image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className={`text-right p-2 text-white absolute bottom-96`}>
+                  {projects[0].name}
+                </div>
+              </div>
+            </Link>
+
+            <Link href={`/projects/${projects[4].slug}`}>
+              <div
+                className="h-[342px] w-[200px] border border-black rounded-2xl"
+                style={{
+                  backgroundImage: `url(${projects[4].image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </Link>
+          </div>
+
+          <Link href={`/projects/${projects[2].slug}`}>
             <div
-              className="h-[342px] w-[400px] border border-black rounded-2xl"
+              className="w-[620px] h-52 border border-black mt-5 rounded-2xl"
               style={{
-                backgroundImage: `url(${project.image})`,
+                backgroundImage: `url(${projects[2].image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              {/* Content inside the div */}
-              {/* <Image
-                src={project.image}
-                alt={project.name}
-                width={750}
-                height={300}
-                className="object-cover rounded-lg border border-gray-500"
-              /> */}
-              <div className={`text-right p-2 text-white absolute bottom-96`}>
-                {project.name}
-              </div>
+              <div></div>
             </div>
-            <div
-              className="h-[342px] w-[200px] border border-black rounded-2xl"
-              style={{
-                backgroundImage: `url(${project.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            ></div>
-          </div>
-          <div
-            className="w-[620px] h-52 border border-black mt-5 rounded-2xl"
-            style={{
-              backgroundImage: `url(${project.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div></div>
-          </div>
+          </Link>
           <div className="mt-5 flex space-x-5">
-            <div
-              className="h-[354px] w-[240px] rounded-2xl border border-black"
-              style={{
-                backgroundImage: `url(${project.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            ></div>
-            <div className="space-y-3">
+            <Link href={`/projects/${projects[3].slug}`}>
               <div
-                className="h-[171px] w-[360px] border rounded-2xl border-black"
+                className="h-[354px] w-[240px] rounded-2xl border border-black"
                 style={{
-                  backgroundImage: `url(${project.image})`,
+                  backgroundImage: `url(${projects[3].image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div
-                className="h-[171px] w-[360px] rounded-2xl border border-black"
-                style={{
-                  backgroundImage: `url(${project.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
+            </Link>
+
+            <div className="space-y-3 flex flex-col">
+              <Link href={`/projects/${projects[1].slug}`}>
+                <div
+                  className="h-[171px] w-[360px] border rounded-2xl border-black"
+                  style={{
+                    backgroundImage: `url(${projects[1].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+              </Link>
+              <Link href={`/projects/${projects[5].slug}`}>
+                <div
+                  className="h-[171px] w-[360px] rounded-2xl border border-black"
+                  style={{
+                    backgroundImage: `url(${projects[5].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+              </Link>
             </div>
           </div>
         </div>
-      ))}
+      </div>
 
       {/* <div className="mt-5 grid md:grid-cols-2">
-        {projects.map((project) => (
+        {projects.map((projects[0]) => (
           <Link
             href={`/projects/${project.slug}`}
             key={project._id}
