@@ -17,9 +17,10 @@ export default async function Home() {
       <p className="mt-3 text-xl text-gray-600">
         Aloha everyone! Check out my projects!
       </p> */}
-      <h2 className="mt-4 font-bold text-gray-700 text-3xl">
-        Related Articles
-      </h2>
+      <div className="flex flex-row">
+        <h2 className="font-bold text-3xl">RELATED</h2>
+        <h2 className="font-bold text-red-600 text-3xl"> {" "} ARTICLES</h2>
+      </div>
       <div className="flex flex-wrap justify-center">
         <div className="mt-5 flex flex-col justify-center items-center w-[620px]">
           <div className="max-w-full flex flex-row space-x-5 ">
