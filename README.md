@@ -1,6 +1,6 @@
-## People's Film Collective (PFC)
+## Bot Blog (BB)
 
-The Kolkata People’s Film Festival (KPFF), organised by the People's Film Collective (PFC), is a people-supported, independent, volunteer-led cinema festival, showcasing politically committed contemporary documentary and fiction cinema from India and Southasia. It brings together a wide cross-section of audience and filmmakers to interact and form friendships and active camaraderie over films and conversations.
+Bot Blog Incoming 
 
 ## Getting Started
 
